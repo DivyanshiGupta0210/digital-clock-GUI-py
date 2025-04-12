@@ -11,7 +11,7 @@ class DigitalClock(QWidget):
         self.timer = QTimer(self)
         self.initUI()
 
-        self.setWindowIcon(QIcon(" ")) #input path location / relative path location of the icon used
+        # self.setWindowIcon(QIcon(" ")) #input path location / relative path location of the icon used
 
     def initUI(self):
         self.setWindowTitle("Digital Clock")
@@ -27,11 +27,11 @@ class DigitalClock(QWidget):
                                       "color: #26FF00")
         self.setStyleSheet("background-color: black")
 
-        font_id = QFontDatabase.addApplicationFont(" ") ##input path location / relative path location of exported text, IF USED
-        font_family = QFontDatabase.applicationFontFamilies(font_id)[0] #need to access 1st element of the family        
+        # font_id = QFontDatabase.addApplicationFont(" ") ##input path location / relative path location of exported text, IF USED
+        # font_family = QFontDatabase.applicationFontFamilies(font_id)[0] #need to access 1st element of the family        
         #to use font
-        my_font = QFont(font_family, 150)
-        self.time_label.setFont(my_font)
+        # my_font = QFont(font_family, 150)
+        # self.time_label.setFont(my_font)
 
         #to update every sec
         self.timer.timeout.connect(self.update_time)
